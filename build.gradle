@@ -2,6 +2,7 @@ plugins {
 	id 'org.springframework.boot' version '2.5.3'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
+	id 'com.microsoft.azure.azurewebapp' version '1.0.0'
 }
 
 group = 'com.github.miyohide'
@@ -30,4 +31,16 @@ dependencyManagement {
 
 test {
 	useJUnitPlatform()
+}
+
+azurewebapp {
+	resourceGroup = 'rg-javaapp'
+	appName = 'app-miyohide-javaapp'
+	pricingTier = 'B1'
+	region = 'japaneast'
+	runtime {
+		os = 'Windows'
+		webContainer = 'Java SE'
+		javaVersion = 'Java 11'
+	}
 }
