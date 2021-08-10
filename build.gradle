@@ -39,7 +39,7 @@ azurewebapp {
 	pricingTier = 'B1'
 	region = 'japaneast'
 	runtime {
-		os = 'Windows'
+		os = 'windows'
 		webContainer = 'Java SE'
 		javaVersion = 'Java 11'
 	}
