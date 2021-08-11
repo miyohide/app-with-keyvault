@@ -1,5 +1,6 @@
 package com.github.miyohide.appwithkeyvault;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,7 +19,9 @@ public class AppWithKeyvaultApplication {
 		return connectionString;
 	}
 
-	private String connectionString = "default Value\n";
+	// Azure Key Vaultのシークレットから値を取得する
+	@Value("${connectionString}")
+	private String connectionString;
 
 	public void run(String... varl) throws Exception {
 		System.out.println(String.format("\nConnection String stored in Azure Key Vault:\n%s\n", connectionString));
