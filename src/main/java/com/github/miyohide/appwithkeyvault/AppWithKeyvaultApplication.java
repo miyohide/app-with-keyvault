@@ -22,8 +22,4 @@ public class AppWithKeyvaultApplication {
 	// Azure Key Vaultのシークレットから値を取得する
 	@Value("${connectionString}")
 	private String connectionString;
-
-	public void run(String... varl) throws Exception {
-		System.out.println(String.format("\nConnection String stored in Azure Key Vault:\n%s\n", connectionString));
-	}
 }
