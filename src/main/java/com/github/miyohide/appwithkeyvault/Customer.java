@@ -5,6 +5,11 @@ public class Customer {
     private String firstName;
     private String lastName;
 
+    // BeanPropertyRowMapperを使う上でデフォルトコンストラクター
+    // が必要
+    public Customer() {
+    }
+
     public Customer(long id, String firstName, String lastName) {
         this.id = id;
         this.firstName = firstName;
