@@ -20,6 +20,7 @@ ext {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'com.azure.spring:azure-spring-boot-starter-keyvault-secrets'
 	implementation 'org.flywaydb:flyway-core'
 	runtimeOnly 'com.h2database:h2'
