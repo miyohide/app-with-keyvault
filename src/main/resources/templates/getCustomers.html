@@ -2,20 +2,21 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>顧客一覧</title>
 </head>
 <body>
+<h1>顧客一覧</h1>
 <ul>
     <li th:each="customer : ${customers}">
-        [[${customer.id}]]
+        id = [ [[${customer.id}]] ]
         <ul>
-            <li>[[${customer.firstName}]]</li>
-            <li>[[${customer.lastName}]]</li>
+            <li>first name = [ [[${customer.firstName}]] ]</li>
+            <li>last name = [ [[${customer.lastName}]] ]</li>
         </ul>
     </li>
-    <li>
-        <a th:href="@{/}">トップページに戻る</a>
-    </li>
 </ul>
+<h2>
+    <a th:href="@{/}">トップページに戻る</a>
+</h2>
 </body>
 </html>

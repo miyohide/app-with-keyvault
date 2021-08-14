@@ -14,7 +14,7 @@ public class Controller {
 
     @GetMapping("/")
     public String index(Model model) {
-        model.addAttribute("message", "Hello Thymeleaf!!");
+        model.addAttribute("message", "へっぽこ顧客管理アプリへようこそ");
         return "index";
     }
 
