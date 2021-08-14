@@ -24,11 +24,6 @@ public class AppWithKeyvaultApplication {
 		return customerService.getCustomerList().toString();
 	}
 
-	@GetMapping("setCustomers")
-	public String setCustomers() {
-		customerService.insertCustomers();
-		return "set customers";
-	}
 //	@GetMapping("get")
 //	public String get() {
 //		return connectionString;
