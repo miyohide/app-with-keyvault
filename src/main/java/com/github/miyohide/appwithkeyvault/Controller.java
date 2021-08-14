@@ -5,6 +5,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.List;
+
 @org.springframework.stereotype.Controller
 public class Controller {
     @Autowired
@@ -21,4 +23,12 @@ public class Controller {
         customerService.insertCustomers();
         return "setCustomers";
     }
+
+    @GetMapping("getCustomers")
+    public String getCustomers(Model model) {
+        List<Customer> customers = customerService.getCustomerList();
+        model.addAttribute("customers", customers);
+        return "getCustomers";
+    }
+
 }

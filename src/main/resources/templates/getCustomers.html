@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li th:each="customer : ${customers}">
+        [[${customer.id}]]
+        <ul>
+            <li>[[${customer.firstName}]]</li>
+            <li>[[${customer.lastName}]]</li>
+        </ul>
+    </li>
+    <li>
+        <a th:href="@{/}">トップページに戻る</a>
+    </li>
+</ul>
+</body>
+</html>

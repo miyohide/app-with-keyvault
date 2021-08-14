@@ -19,11 +19,6 @@ public class AppWithKeyvaultApplication {
 		SpringApplication.run(AppWithKeyvaultApplication.class, args);
 	}
 
-	@GetMapping("getCustomers")
-	public String getCustomers() {
-		return customerService.getCustomerList().toString();
-	}
-
 //	@GetMapping("get")
 //	public String get() {
 //		return connectionString;
