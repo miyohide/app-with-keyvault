@@ -12,9 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @RestController
 public class AppWithKeyvaultApplication {
-	@Autowired
-	private CustomerService customerService;
-
 	public static void main(String[] args) {
 		SpringApplication.run(AppWithKeyvaultApplication.class, args);
 	}
