@@ -9,7 +9,9 @@
 
 <ul>
     <li>
-        <a th:href="@{/setCustomers}">顧客を登録</a>
+        <form action="#" th:action="@{/setCustomers}" id="setCustomers" method="post">
+            <a href="javascript:setCustomers.submit()">顧客を登録</a>
+        </form>
     </li>
 </ul>
 </body>
