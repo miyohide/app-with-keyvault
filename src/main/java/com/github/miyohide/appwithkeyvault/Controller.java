@@ -14,7 +14,7 @@ public class Controller {
 
     @GetMapping("/")
     public String index(Model model) {
-        model.addAttribute("message", "へっぽこ顧客管理アプリへようこそ");
+        model.addAttribute("message", "へっぽこ顧客管理アプリ V2へようこそ");
         return "index";
     }
 
